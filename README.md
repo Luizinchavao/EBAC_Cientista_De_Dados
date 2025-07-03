@@ -79,3 +79,34 @@ Carga horária total: 45 horas.
 - XGBoost
 - Duelo entre modelos 4: XGBoost x Árvore de Decisão
 - Modelos de Linguagem
+
+  ---
+## 🗂️ Estrutura do Repositório
+/Ciência_De_Dados
+├── Fase_1
+│ └── resumo.md
+├── Fase_2
+│ └── resumo.md
+├── ...
+├── Fase_9
+│ └── resumo.md
+
+
+Cada pasta de fase conterá:
+- Resumo do conteúdo estudado
+- Observações pessoais
+- Possíveis notebooks ou códigos práticos
+
+---
+
+## 👨‍💻 Sobre mim
+Sou estudante do curso de Ciência de Dados da EBAC. Criei este repositório para acompanhar meu progresso, praticar versionamento com Git/GitHub e construir um portfólio que mostre meu comprometimento em aprender e me tornar um profissional da área.
+
+---
+
+## 🤝 Contribuições
+Este repositório é pessoal, mas estou aberto a trocas e conversas sobre Ciência de Dados! Se tiver dicas, sugestões ou quiser conversar, fique à vontade para abrir uma *Issue* ou me contactar.
+
+---
+
+> **Em constante evolução. Aprender é um processo contínuo! 🚀**
