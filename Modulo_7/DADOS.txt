@@ -1,0 +1,112 @@
+O que são dados e por que são importantes na sociedade contemporânea?
+Dados são fatos ou informações que, quando processados, se transformam em conhecimento. 
+Eles são importantes na sociedade contemporânea porque influenciam decisões em diversas áreas, como saúde, educação, 
+marketing e transporte, especialmente após a pandemia da Covid-19, que destacou ainda mais sua relevância.
+
+
+
+
+O que é Big Data e por que é necessário?
+Big Data refere-se ao grande volume e complexidade dos dados que não podem ser processados por métodos tradicionais. 
+É necessário porque o aumento exponencial de dados exige novas abordagens e ferramentas para gerenciá-los e extrair informações valiosas.
+
+
+Aprenda como e onde aplicar Ciência de Dados
+Primeiramente temos que coletar os dados - Definir com clareza o problema ou oportunidade, limpar e preparar os dados.
+ Algoritmo -
+Depois vamos avaliar os resultados e realizar melhorias
+Por último vamos implementar o algoritmo e monitorar o monitoramento
+Vários contextos que usam ciência de dados
+banco, netflix, área da saúde, etc.
+Pensando de uma forma mais geral, sem especificar a área.
+Um dos usos mais comuns da ciência de dados é para fazer variações e antecipações
+ou uma demanda de análise de comportamento do cliente
+Na área de comércio eletrônico podemos fazer variações de demandas de produtos para os próximos meses, o agente faz isso analisando o histórico de vendas usando algumas técnicas de previsão.
+Outro contexto que o agente usa é de detectar anomalias e fraudes
+Necessidade de prever ou melhorar um processo repetitivo
+Quando preciso ter insights
+O Algoritmo de Marching Learning
+analisa o grande volume de dados que foi gerado pelos usuários das redes sociais e identifica os padrões de comportamento e personaliza os feeds de conteúdo com bases nas seleções individuais e também consegue sugerir conexões relevantes e aprimorar a experiência do usuário
+A Ciência de dados também é usada para identificar atividades suspeitas e espalhar notícias falsas.
+
+
+
+Explique com suas palavras o que são dados.
+
+Dados são pedaços soltos de fatos, números, textos ou imagens.
+São informações, saberes, conhecimentos.
+É qualquer valor que seja atribuído a algo que, sozinhos, não dizem muita coisa.
+Sâo vários contextos  que usam ciência de dados:
+Banco, netflix, área da saúde, área de esporte, área de jogos, usando os bots para jogadores, praticamente os dados está presente em tudo.
+Pensando de uma forma mais geral, sem especificar a área.
+Um dos usos mais comuns da ciência de dados é para fazer variações e antecipações
+ou uma demanda de análise de comportamento do cliente
+Na área de comércio eletrônico podemos fazer variações de demandas de produtos para os próximos meses, o agente faz isso analisando o histórico de vendas usando algumas técnicas de previsão.
+Outro contexto que o agente usa é de detectar anomalias e fraudes
+Necessidade de prever ou melhorar um processo repetitivo
+
+
+
+Dados são valores ou informações brutas que, por si só, não têm muito valor ou significado. Eles podem ser números, palavras ou observações sem contexto claro. Porém, quando esses dados são processados ou interpretados, eles se transformam em algo mais valioso, pois passam a ter significado e nos ajudam a tomar decisões ou entender algo.
+
+Por exemplo: os números 10, 17 e 28 isolados são apenas dados crus. Mas, se dissermos que são 10 °C, 17 °C e 28 °C, estamos contextualizando como temperaturas em três dias seguidos. Assim, esses dados se tornam mais refinados e informativos.
+
+
+
+
+
+coleta de dados basica
+
+import requests
+from bs4 import BeautifulSoup
+
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+}
+
+response = requests.get("https://br.finance.yahoo.com/quote/%5EBVSP/history/?fr=sycsrp_catchall")
+print(response.text[:600])
+
+soup = BeautifulSoup(response.text, "html.parser")
+print(soup.prettify()[:1000])
+
+
+
+teste 
+import requests
+
+url_ibovespa = "https://br.finance.yahoo.com/quote/%5EBVSP/history"
+
+# Cabeçalho User-Agent para simular um navegador
+
+
+response = requeheaders = {
+#     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+# }sts.get(url_ibovespa, headers=headers) # Note o 'headers=headers' aqui
+
+print(response.text[0:800])
+
+
+
+estudo
+
+# Entendimento da linha print (response.text[:600]
+
+# texto = "Extrair mensagem de texto"
+
+texto = list(range(1, 20))
+print(texto)
+
+subtexto = texto[:11]
+print(subtexto)
+
+subtexto = texto[8:13]
+print(subtexto)
+
+subtexto = texto[8:-6]
+print(subtexto)
+
+
+
+
