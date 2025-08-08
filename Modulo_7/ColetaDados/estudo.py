@@ -1,6 +1,8 @@
-# ENTNDIMENTO DA LINHA -> print(response.text[:500]) = SLICE é o fatiamento, é obter uma parte
+# COLETA DE DADOS BASICA
+# ENTNDIMENTO DA LINHA -> print(response.text[:600]) = SLICE é o fatiamento, é obter uma parte.
 
-# texto = 'Extrair msg de texto' # 'Extrair mensagem de texto' -> Isso é chamado de sequência
+# Variável texto 
+# 'Extrair mensagem de texto' -> Isso é chamado de sequência
 
 texto = list(range(1,20))
 
@@ -13,7 +15,7 @@ print(subtexto)
 subtexto = texto[-5:] # Vai começar de trás para frente com número negativo -5
 print(subtexto)
 
-subtexto = texto[8:11] # INtervalo - Quero iniciar no 8 ir até o 11
+subtexto = texto[8:11] # Intervalo - Quero iniciar no 8 ir até o 11
 print(subtexto)
 
 
