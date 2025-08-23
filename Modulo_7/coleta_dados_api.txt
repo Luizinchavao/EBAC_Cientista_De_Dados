@@ -27,7 +27,7 @@ contar_paragrafos = 0
 for linha_texto in extracao.find_all(['h2','p']):
     if linha_texto.name == 'h2': 
         contar_titulos += 1  # -> contar_titulos = contar_titulos + 1
-    elif linha_texto.name == 'p':  # pyright: ignore[reportAttributeAccessIssue]
+    elif linha_texto.name == 'p': 
          contar_paragrafos += 1
   
 print('Total de Títulos', contar_titulos)

@@ -14,7 +14,7 @@ livros = soup.find_all("article", class_="product_pod")
 # Loop para extrair dados de cada livro
 for livro in livros:
     # Título do livro
-    titulo = livro.h3.a["title"]
+    titulo = livro.h3.a["title"] # type: ignore
     
     # Preço
     preco = livro.find("p", class_="price_color").text
