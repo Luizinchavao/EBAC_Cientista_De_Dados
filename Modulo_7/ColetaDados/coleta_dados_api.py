@@ -3,7 +3,7 @@ import requests
 
 def enviar_arquivo():
     # Caminho do arquivo
-    caminho = 'C:/Users/PC/Desktop/EBAC_Cientista_De_Dados/produtos_informatica.xlsx'
+    caminho = 'C:/Users/PC/Desktop/EBAC_Cientista_De_Dados/produtos_informatica.xlsx.xlsx'
     
     try:
         # Tenta abrir o arquivo para envio

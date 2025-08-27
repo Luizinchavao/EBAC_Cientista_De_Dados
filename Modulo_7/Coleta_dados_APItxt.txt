@@ -1,0 +1,35 @@
+def enviar_arquivo_chave():
+   # Caminho do Arquivo e chave para upload
+   caminho = 'C:/Users/PC/Desktop/EBAC_Cientista_De_Dados/Modulo_7/produtos_informatica.xlsx.xlsx'
+   chave_acesso = JHjiEPJGxDQaw56SZLMP8HAoUG9YFrKX
+
+   # Enviar o arquivo 
+   requisicao = requests.post(
+      url='https://upload.gofile.io/uploadFile',
+      files={'file': open(caminho, 'rb')},
+      headers={'Authorization': chave_acesso}
+      
+   )
+
+def receber_arquivo(file_url):
+    # Receber o arquivo (get)
+    requisicao = requests.get(file_url)
+
+    # Salvar o arquivo
+    if requisicao.ok:
+     with open('arquivo_baixado.xlsx', 'wb') as file:
+         file.write(requisicao.content)
+        print("Arquivo baixado com sucesso")
+    else:
+        print("Erro ao baixar o arquivo", requisicao.json())
+
+receber_arquivo('https://gofile.io/d/Z0PLnF')
+
+
+
+
+
+
+
+
+
