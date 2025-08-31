@@ -2,14 +2,14 @@ import pandas as pd
 from sklearn.preprocessing import RobustScaler, MinMaxScaler, StandardScaler
 
 
-pd.set_option('display. Width', None)
+pd.set_option('display.width', None)
 pd.set_option('display.max_colwidth', None)
 
 df = pd.read_csv('clientes-v2-tratados.csv')
 
 print(df.head())
 
-df = df.drop['data', 'estado', 'nivel_educacao', 'numero_filhos', 'estado_civel', 'area_atuacao'], axis=1
+df = df.drop(['data', 'estado', 'nivel_educacao', 'numero_filhos', 'estado_civil', 'area_atuacao'], axis=1)
 
 # Normalização - MinMaxScaler.
 scaler = MinMaxScaler()
@@ -18,7 +18,7 @@ df['salarioMinMaxScaler'] = scaler.fit_transform(df[['salario']])
 
 min_max_scaler = MinMaxScaler(feature_range=(-1, 1))
 df['idadeMinMaxScaler_mm'] = min_max_scaler.fit_transform(df[['idade']])
-df['salarioMinMaxScaler'] = min_max_scaler.fit_transform(df[['salario']])
+df['salarioMinMaxScaler_mm'] = min_max_scaler.fit_transform(df[['salario']])
 
 # Padronização StandardScaler
 scaler = StandardScaler()
@@ -38,11 +38,11 @@ print("Salário - Min: {:.4f} Max: {:.4f} Mean: {:.4f} Std: {:.4f}".format(df['s
 
 print("\nMinMaxScaler (De -1 a 1):")
 print("Idade - Min: {:.4f} Max: {:.4f} Mean: {:.4f} Std: {:.4f}".format(df['idadeMinMaxScaler_mm'].min(), df['idadeMinMaxScaler_mm'].max(), df['idadeMinMaxScaler_mm'].mean(), df['idadeMinMaxScaler_mm'].std()))
-print("Salário - Min: {:.4f} Max: {:.4f} Mean: {:.4f} Std: {:.4f}".format(df['salarioMinMaxScaler_mm'].min(), df['salarioMinMaxScaler_mm'].max(), df['salarioMinMaxScaler_mm'].mean(), df['salarioMInMaxScaler_mm'].std()))
+print("Salário - Min: {:.4f} Max: {:.4f} Mean: {:.4f} Std: {:.4f}".format(df['salarioMinMaxScaler_mm'].min(), df['salarioMinMaxScaler_mm'].max(), df['salarioMinMaxScaler_mm'].mean(), df['salarioMinMaxScaler_mm'].std()))
 
 print("\nStandardScaler(Ajuste a média a 0 e desvio padrão a 1):")
-print("Idade - Min: {:.4f} Max: {:.4f} Mean: {:.18f} Std: {:.4f}".format(df['idadeStandardScaler'].min(), df['idadeStandardScaler'].max(), df['idadeStandardScaler'].mean(), df['idadeStandardScaler'].std()))
-print("Salário - Min: {:.4f} Max: {:.4f} Mean: {:,18f} Std: {:.4f}".format(df['salarioStandardScaler'].min(), df['salarioStandardScaler'].max(), df['salarioStandardScaler'].mean(), df['salarioStandardScaler'].std()))
+print("Idade - Min: {:.4f} Max: {:.4f} Mean: {:18f} Std: {:.4f}".format(df['idadeStandardScaler'].min(), df['idadeStandardScaler'].max(), df['idadeStandardScaler'].mean(), df['idadeStandardScaler'].std()))
+print("Salário - Min: {:.4f} Max: {:.4f} Mean: {:18f} Std: {:.4f}".format(df['salarioStandardScaler'].min(), df['salarioStandardScaler'].max(), df['salarioStandardScaler'].mean(), df['salarioStandardScaler'].std()))
 
 print("\nRobustScaler (Ajuste a mediana e IQR):")
 print("Idade - Min: {:.4f} Max: {:.4f} Mean: {:.4f} Std: {:.4f}".format(df['idadeRobustScaler'].min(), df['idadeRobustScaler'].max(), df['idadeRobustScaler'].mean(), df['idadeRobustScaler'].std()))
